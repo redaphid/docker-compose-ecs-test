@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  web:
+    image: "hashicorp/http-echo"
+    ports:
+      - "80:80"
+    command: -text "Hi from aws" -listen=:80
+  redis:
+    image: "redis:alpine"
