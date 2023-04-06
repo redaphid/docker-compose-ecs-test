@@ -4,6 +4,6 @@ services:
     image: "hashicorp/http-echo"
     ports:
       - "80:80"
-    command: -text "Bye from aws" -listen=:80
+    command: -text "Hi from aws" -listen=:80
   redis:
     image: "redis:alpine"
