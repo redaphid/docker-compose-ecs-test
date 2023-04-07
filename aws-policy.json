@@ -42,6 +42,7 @@
     "route53:GetHostedZone",
     "route53:ListHostedZonesByName",
     "servicediscovery:*"
-    ]
+    ],
+    "Resource": "*"
   }
 }
