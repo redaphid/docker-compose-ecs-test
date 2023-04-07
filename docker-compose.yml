@@ -3,26 +3,7 @@ services:
   web:
     image: "hashicorp/http-echo"
     ports:
-        - "80:80"
-    command: '-text "Your AWS_DEPLOY_TEXT environment variable is apparently not accessible client->host" -listen=:80'
-  db: 
-    image: 'bitnami/postgresql:14'
-    environment:
-      POSTGRESQL_DATABASE: postgres
-      POSTGRESQL_USERNAME: redaphid
-      POSTGRESQL_PASSWORD: cookies2
-      POSTGRESQL_PORT: 5432
-    ports:
-        - "5432:5432"
-    volumes:
-        - my_data:/var/lib/postgresql/data
- 
-volumes:
-    my_data:   
-        driver_opts:
-            backup_policy: ENABLED
-            lifecycle_policy: AFTER_14_DAYS
-            performance_mode: maxIO
-            throughput_mode: provisioned
-            provisioned_throughput: 1
-
+      - "80:80"
+    command: -text "Bye from aws" -listen=:80
+  redis:
+    image: "redis:alpine"
